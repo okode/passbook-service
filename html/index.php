@@ -10,8 +10,6 @@ use Passbook\Pass\Structure;
 use Passbook\Type\Generic;
 use Passbook\Pass\Location;
 
-
-
 $passbookId = date_timestamp_get(date_create());
 
 $productType = "Seguro de Coche";
@@ -23,8 +21,6 @@ $officeTimetable = "L-V 09:30-13:30 / 17:00-20:00";
 $lat = 40.4465120;
 $lng = -3.6127240;
 $officeURL = "http://www.mapfre.es/wps/portal/redoficinasmapfre/oficinas/6219";
-
-
 
 // Create a generic passbook
 $pass = new Generic($passbookId, "Oficinas MAPFRE");
@@ -79,7 +75,6 @@ $back = new Field('info', 'Infórmate en tu oficina');
 $back->setLabel('');
 $structure->addBackField($back);
 
-
 // Add icon image
 $icon = new Image('assets/images/icon.png', 'icon');
 $pass->addImage($icon);
@@ -91,7 +86,6 @@ $pass->addImage($icon);
 $image = new Image('assets/images/logomapfre.png', 'logo');
 $image->setIsRetina(true);
 $pass->addImage($image);
-
 
 // Set pass structure
 $pass->setStructure($structure);
