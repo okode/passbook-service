@@ -102,7 +102,7 @@ if($lat != null && $lng != null) {
 }
 
 // Create pass factory instance
-$factory = new PassFactory('pass.com.mapfre.passbookRecomendador', 'WAXWGS8JV5', 'MAPFRE', 'assets/cert/mapfre_enterprise_pk.p12', 'm4pfr3', 'assets/cert/AppleWDRCA.pem');
+$factory = new PassFactory('pass.com.okode.passbooktest', '83H5GV742F', 'MAPFRE', 'assets/cert/passbook_okode.p12', '0k0d3', 'assets/cert/AppleWDRCA.pem');
 $factory->setOutputPath('/tmp/');
 $passbook = $factory->package($pass);
 
