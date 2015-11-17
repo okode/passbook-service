@@ -1,0 +1,5 @@
+{
+    "require": {
+        "eo/passbook": "1.2.0"
+    }
+}
