@@ -109,7 +109,7 @@ if($lat != null && $lng != null) {
 
 // Create pass factory instance
 $factory = new PassFactory('pass.com.mapfre.passbookRecomendador', 'WAXWGS8JV5', 'MAPFRE', 'assets/cert/mapfre_enterprise_pk.p12', 'm4pfr3', 'assets/cert/AppleWDRCA.pem');
-$factory->setOutputPath('output/');
+$factory->setOutputPath('/tmp/');
 $passbook = $factory->package($pass);
 
 // Send the right headers
