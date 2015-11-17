@@ -12,3 +12,7 @@ Running
 -------
 
     $ docker run --name=passbook -h passbook -p 8080:80 -d passbook
+
+Open a browser at:
+
+    http://$(docker-machine ip default):8080
