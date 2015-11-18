@@ -12,14 +12,14 @@ Put your .p12 certificate in the following path:
 
 Build the Docker image:
 
-    $ docker build -t passbook .
+    $ docker-compose build
 
 Running
 -------
 
 Run the Docker container:
 
-    $ docker run --name=passbook -h passbook -p 8080:80 -d passbook
+    $ docker-compose up -d
 
 Open a browser at:
 

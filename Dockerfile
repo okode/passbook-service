@@ -21,12 +21,15 @@ RUN apt-get install -y php5-fpm
 
 RUN rm -rf /var/lib/apt/lists/*
 
-COPY resources/default /etc/nginx/sites-available/
-COPY html /var/www/html/
+COPY resources/nginx/default /etc/nginx/sites-available/
+COPY resources/html /var/www/html/
 
 RUN cd /var/www/html && \
     curl -s http://getcomposer.org/installer | php && \
     php composer.phar install
+
+RUN ln -sf /dev/stdout /var/log/nginx/access.log		
+RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
 EXPOSE 80
 
