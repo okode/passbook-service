@@ -23,4 +23,4 @@ Run the Docker container:
 
 Open a browser at:
 
-    http://$(docker-machine ip default):8080
+    http://$(docker-machine ip default)
